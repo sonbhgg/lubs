@@ -47,4 +47,57 @@ if (file_exists("folder/mir.txt")) {
     echo "   - Файл 'mir.txt' НЕ существует.<br>";
 }
 
+echo "<h2>Часть 2</h2>";
+
+if (!file_exists("test")) {
+    mkdir("test");
+    echo "1. Папка 'test' создана.<br>";
+} else {
+    echo "1. Папка 'test' уже существует.<br>";
+}
+
+if (file_exists("test")) {
+    rename("test", "www");
+    echo "2. Папка 'test' переименована в 'www'.<br>";
+} else {
+    echo "2. Папка 'test' не найдена для переименования.<br>";
+}
+
+if (file_exists("www")) {
+    rmdir("www");
+    echo "3. Папка 'www' удалена.<br>";
+} else {
+    echo "3. Папка 'www' не найдена для удаления.<br>";
+}
+
+if (!file_exists("test")) {
+    mkdir("test");
+    echo "4. Папка 'test' создана заново для выполнения задания.<br>";
+}
+
+$foldersArray = ["documents", "images", "downloads", "backup"];
+echo "4. Создание папок в 'test': ";
+
+foreach ($foldersArray as $folderName) {
+    $path = "test/" . $folderName;
+    if (!file_exists($path)) {
+        mkdir($path);
+        echo "'$folderName' ";
+    } else {
+        echo "(папка '$folderName' уже существует) ";
+    }
+}
+echo "<br>";
+
+echo "5. Файлы с расширением .jpg в текущей папке:<br>";
+$jpgFiles = glob("*.jpg");
+
+if (count($jpgFiles) > 0) {
+    foreach ($jpgFiles as $file) {
+        echo "   - " . $file . "<br>";
+    }
+} else {
+    echo "   - Файлы с расширением .jpg не найдены.<br>";
+}
+
 ?>
