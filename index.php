@@ -7,6 +7,17 @@ class Worker
     private $age;
     private $salary;
     
+    //Задание 6: свойство для изменненого метода getSalary()
+    private static $totalSalary = 0;
+    
+    public function __construct($name, $age, $salary)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->salary = $salary;
+        self::$totalSalary += $salary;
+    }
+    
     // Задание 3: метод получения имени сотрудника
     public function getName()
     {
@@ -19,10 +30,16 @@ class Worker
         return $this->age;
     }
     
-    // Задание 5: метод получения
+    // Задание 5: метод получения зп
     public function getSalary()
     {
         return $this->salary;
+    }
+    
+    // Задание 6: метод получения зп всех работников
+    public static function getTotalSalary()
+    {
+        return self::$totalSalary;
     }
 }
 
@@ -38,4 +55,7 @@ echo "Сумма возрастов работников: " . $totalAge . " ле
 
 // Задание 5: работа метода для вывода зп
 echo "Метод getSalary() для worker1: " . $worker1->getSalary() . "<br><br>";
+
+// Задание 6: работа метода
+echo "Общая сумма зарплат всех работников: " . Worker::getTotalSalary() . " руб.<br><br>";
 ?>
