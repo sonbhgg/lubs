@@ -12,6 +12,12 @@ class Worker
     {
         return $this->name;
     }
+    
+    //Задание 4: метод получения возраста сотрудника
+    public function getAge()
+    {
+        return $this->age;
+    }
 }
 
 // Задание 1: 2 объекта класса
