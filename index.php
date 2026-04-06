@@ -7,16 +7,22 @@ class Worker
     private $age;
     private $salary;
     
-    //Задание 3: метод получения имени сотрудника
+    // Задание 3: метод получения имени сотрудника
     public function getName()
     {
         return $this->name;
     }
     
-    //Задание 4: метод получения возраста сотрудника
+    // Задание 4: метод получения возраста сотрудника
     public function getAge()
     {
         return $this->age;
+    }
+    
+    // Задание 5: метод получения
+    public function getSalary()
+    {
+        return $this->salary;
     }
 }
 
@@ -29,4 +35,7 @@ $totalSalary = $worker1->getSalary() + $worker2->getSalary();
 $totalAge = $worker1->getAge() + $worker2->getAge();
 echo "Сумма зарплат работников: " . $totalSalary . " руб.<br>";
 echo "Сумма возрастов работников: " . $totalAge . " лет<br><br>";
+
+// Задание 5: работа метода для вывода зп
+echo "Метод getSalary() для worker1: " . $worker1->getSalary() . "<br><br>";
 ?>
