@@ -43,10 +43,11 @@ class Worker
     }
     
     // Задание 7: изменненый getAge()
-    //Задание 8: добавление проверки в метод
+    // Задание 8: добавление проверки в метод
+    // Задание 9: добавление метода checkAge()
     public function setAge($newAge)
     {
-        if ($newAge >= 18) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
             echo "Возраст работника {$this->name} успешно изменён на {$newAge}<br>";
             return true;
@@ -54,6 +55,12 @@ class Worker
             echo "Вам работать в нашей компании еще рано (возраст {$newAge} лет)<br>";
             return false;
         }
+    }
+    
+    // Задание 9: метод для проверки
+    private function checkAge($age)
+    {
+        return $age >= 18;
     }
 }
 
@@ -72,4 +79,8 @@ echo "Метод getSalary() для worker1: " . $worker1->getSalary() . "<br><b
 
 // Задание 6: работа метода
 echo "Общая сумма зарплат всех работников: " . Worker::getTotalSalary() . " руб.<br><br>";
+
+// Задание 9: работа метода
+$worker2->setAge(20);
+echo "Новый возраст Марии: " . $worker2->getAge() . " лет<br><br>";
 ?>
