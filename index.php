@@ -41,6 +41,13 @@ class Worker
     {
         return self::$totalSalary;
     }
+    
+    // Задание 7: изменненый getAge()
+    public function setAge($newAge)
+    {
+            $this->age = $newAge;
+            echo "Возраст работника {$this->name} успешно изменён на {$newAge}<br>";
+    }
 }
 
 // Задание 1: 2 объекта класса
