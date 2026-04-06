@@ -6,6 +6,12 @@ class Worker
     private $name;
     private $age;
     private $salary;
+    
+    //Задание 3: метод получения имени сотрудника
+    public function getName()
+    {
+        return $this->name;
+    }
 }
 
 // Задание 1: 2 объекта класса
