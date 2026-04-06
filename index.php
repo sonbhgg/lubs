@@ -43,10 +43,17 @@ class Worker
     }
     
     // Задание 7: изменненый getAge()
+    //Задание 8: добавление проверки в метод
     public function setAge($newAge)
     {
+        if ($newAge >= 18) {
             $this->age = $newAge;
             echo "Возраст работника {$this->name} успешно изменён на {$newAge}<br>";
+            return true;
+        } else {
+            echo "Вам работать в нашей компании еще рано (возраст {$newAge} лет)<br>";
+            return false;
+        }
     }
 }
 
