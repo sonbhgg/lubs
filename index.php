@@ -6,11 +6,15 @@ class Worker
     private $name;
     private $age;
     private $salary;
-    
 }
 
 // Задание 1: 2 объекта класса
 $worker1 = new Worker("Иван Петров", 25, 50000);
 $worker2 = new Worker("Мария Сидорова", 19, 60000);
 
+// Задание 2: сумма зарплат и сумма возрастов
+$totalSalary = $worker1->getSalary() + $worker2->getSalary();
+$totalAge = $worker1->getAge() + $worker2->getAge();
+echo "Сумма зарплат работников: " . $totalSalary . " руб.<br>";
+echo "Сумма возрастов работников: " . $totalAge . " лет<br><br>";
 ?>
