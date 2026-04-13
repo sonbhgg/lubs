@@ -1,3 +1,4 @@
+<?php
 interface AreaCalculable
 {
     public function getArea();
