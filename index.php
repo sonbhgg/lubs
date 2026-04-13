@@ -24,4 +24,8 @@ class Square extends Figure implements AreaCalculable
 }
 
 class Triangle extends Figure implements AreaCalculable
-{}
+{
+    private $a;
+    private $b;
+    private $c;
+}
