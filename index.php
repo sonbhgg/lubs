@@ -19,7 +19,9 @@ class Rectangle extends Figure implements AreaCalculable
 }
 
 class Square extends Figure implements AreaCalculable
-{}
+{
+    private $a;
+}
 
 class Triangle extends Figure implements AreaCalculable
 {}
