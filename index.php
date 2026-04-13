@@ -1,3 +1,8 @@
+interface AreaCalculable
+{
+    public function getArea();
+}
+
 abstract class Figure
 {
     protected $area;       
