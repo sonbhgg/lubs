@@ -35,6 +35,11 @@ class Rectangle extends Figure implements AreaCalculable
         $this->area = $this->a * $this->b;
         return $this->area;
     }
+    
+    public function infoAbout()
+    {
+        return "Это класс прямоугольника. У него {$this->sidesCount} стороны.";
+    }
 }
 
 class Square extends Figure implements AreaCalculable
@@ -52,6 +57,11 @@ class Square extends Figure implements AreaCalculable
     {
         $this->area = $this->a * $this->a;
         return $this->area;
+    }
+    
+    public function infoAbout()
+    {
+        return "Это класс квадрата. У него {$this->sidesCount} стороны.";
     }
 }
 
@@ -75,5 +85,10 @@ class Triangle extends Figure implements AreaCalculable
         $s = ($this->a + $this->b + $this->c) / 2;
         $this->area = sqrt($s * ($s - $this->a) * ($s - $this->b) * ($s - $this->c));
         return $this->area;
+    }
+    
+    public function infoAbout()
+    {
+        return "Это класс треугольника. У него {$this->sidesCount} стороны.";
     }
 }
